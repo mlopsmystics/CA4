@@ -29,4 +29,12 @@ jobs:
       - name: Lint
         run: |
           make lint
+      - name: Build the Docker image
+        run: |
+          docker build . --file Dockerfile --tag mlopsmystics:latest
+
+      - name: Push Docker iamge
+        run: |
+          docker tag mlopsmystics:latest ${{ secrets.DOCKER_USERNAME }}/ca4_web:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/ca4_web:latest
     
