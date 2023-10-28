@@ -4,7 +4,7 @@
 name: i201756 workflow
 on:
   push:
-    branches: ["i201756"]
+    branches: ["i201756" , "main"]
   pull_request:
     branches: ["i201756"]
 
