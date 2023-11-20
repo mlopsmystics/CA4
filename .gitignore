@@ -13,4 +13,4 @@ instance/
 *.db
 
 # venv 
-venv
+.venv
